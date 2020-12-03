@@ -1,4 +1,4 @@
-class Raindrop{
+class Snowflake{
 
     float x1;
     float y1;
@@ -8,7 +8,7 @@ class Raindrop{
     float speed;
     color c;    
 
-    Raindrop(){
+    Snowflake(){
         this.x1 = 0;
         this.y1 = 0;
         this.x2 = 0;
@@ -18,7 +18,7 @@ class Raindrop{
         this.c = color(255);
     }
 
-    Raindrop(float x, float y, float speed){
+    Snowflake(float x, float y, float speed){
         this.x1 = x;
         this.y1 = y;
         this.x2 = x;
@@ -65,7 +65,7 @@ class Raindrop{
     }
     
 
-    public void updateRaindrop(float wind){
+    public void updateSnowflake(float wind){
         if (this.y1 >= 0){
             this.x1 += wind;
             this.x2 += wind;
@@ -78,7 +78,7 @@ class Raindrop{
         this.size = speed*0.1;
     }
 
-    public void drawRaindrop(){
+    public void drawSnowflake(){
         stroke (this.c);
         strokeWeight(this.size); 
         line(this.x1, this.y1, this.x2, this.y2);

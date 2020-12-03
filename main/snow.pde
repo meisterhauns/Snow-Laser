@@ -4,12 +4,14 @@ class Snow{
     float y;
     color c;
     float s;
+    float rot;
 
     Snow(){
         this.x = 0;
         this.y = 0;
         this.c = color(#ffffff);
         this.s = 0;
+        this.rot = random(0,TWO_PI);
     }
 
     Snow(float x, float y, float s){
@@ -17,6 +19,7 @@ class Snow{
         this.y = y;
         this.c = color(#ffffff);
         this.s = s;
+        this.rot = random(0,TWO_PI);
     }
 
     Snow(float x, float y, int i, float s){
@@ -37,6 +40,7 @@ class Snow{
                 break;
         }
         this.s = s;
+        this.rot = random(0,TWO_PI);
     }
 
     public color getColor() {
@@ -81,7 +85,18 @@ class Snow{
     public void drawSnow() {
         fill (this.c);
         noStroke();
-        circle(this.x, this.y, this.s);
+        pushMatrix();
+        translate(this.x, this.y);
+        rotate(rot);
+        beginShape();
+        for (float a = 0; a < TWO_PI; a += PI/3) {
+            float sx = cos(a) * this.s;
+            float sy = sin(a) * this.s;
+            vertex(sx, sy);
+        }
+        endShape(CLOSE);
+        popMatrix();
+        //circle(this.x, this.y, this.s);
     }
 
     public boolean colorEquals(color c){
