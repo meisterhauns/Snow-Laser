@@ -1,23 +1,16 @@
 # Snow Laser
-Designing with Code | Snow Laser
 
+> Designing with Code | Snow Laser
 
-
-
-Object oriented programming | Snow Generator
+A snow generating [Processing](https://processing.org/) app created using object oriented programming.
 
 Laser all snow away!
 
+## Controls
 
-Controls:
+* left click: laser
+* mouse wheel: wind direction
+* right click: reset wind
+* mouse move: hide instructions
 
-left click: laser
-
-mouse wheel: wind direction
-
-right click: reset wind
-
-
-
-
-Visit here: https://github.com/meisterhauns/Snow-Laser
+###### view on GitHub: https://github.com/meisterhauns/Snow-Laser
