@@ -39,8 +39,30 @@ class Snow{
         this.s = s;
     }
 
+    public color getColor() {
+        return this.c;
+    }
+    
+
     public void setColor(color c) {
         this.c = c;
+    }
+
+    public void setRandomColor() {
+        switch ((int)random(0,3)){
+            case 0:
+                this.c = color(#142332);
+                break;
+            case 1:
+                this.c = color(#1d3043);
+                break;
+            case 2:
+                this.c= color(#18222d);
+                break;
+            case 3:
+                this.c = color(#121b25);
+                break;
+        }
     }
 
     public float getX() {
@@ -60,6 +82,10 @@ class Snow{
         fill (this.c);
         noStroke();
         circle(this.x, this.y, this.s);
+    }
+
+    public boolean colorEquals(color c){
+        return (this.c == c);
     }
     
 }
