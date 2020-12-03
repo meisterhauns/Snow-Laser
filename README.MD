@@ -10,7 +10,7 @@ Laser all snow away!
 Controls:
 left click: laser
 mouse wheel: wind direction
-richt click: reset wind
+right click: reset wind
 
 
 
