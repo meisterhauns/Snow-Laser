@@ -28,7 +28,7 @@ public Snowflake[] setupSnowflakes(Snowflake[] sf, int wind) {
 
 
 public Snow generateSnow(float msl, int sp) {
-    return new Snow(random(0.0, width), random(height - msl - 3*sp, height - 0.1*msl - 3*sp), (int)random(0,3), random(7*sp,21*sp));
+    return new Snow(random(0.0, width), random(height - msl - 0.5*sp, height), (int)random(0,3), random(0.5*sp,1.5*sp));
 }
 
 public void renewSnowflakes(Snowflake[] sfs, int wind) {

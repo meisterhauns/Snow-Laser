@@ -22,7 +22,7 @@ public void drawSky(float[][] stars){
     //stars
     fill(#bfe5ff);
     for (float[] f : stars) {
-        circle(width*f[0], height*f[1], min(width, height)*0.01);
+        circle(width*f[0], height*f[1], min(width, height)*0.005);
     }
 }
 
